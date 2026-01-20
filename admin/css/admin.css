@@ -1,0 +1,455 @@
+/**
+ * WCS Retry Rules Editor - Admin Styles
+ *
+ * @package WCS_Retry_Rules_Editor
+ */
+
+/* Wrapper */
+.wcs-rre-wrap {
+	max-width: 1200px;
+}
+
+.wcs-rre-wrap .description {
+	margin-bottom: 20px;
+}
+
+/* Loading state */
+.wcs-rre-loading {
+	display: flex;
+	align-items: center;
+	gap: 10px;
+	padding: 20px;
+	background: #fff;
+	border: 1px solid #c3c4c7;
+	border-radius: 4px;
+}
+
+/* Header */
+.wcs-rre-header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 20px;
+	padding: 15px 20px;
+	background: #fff;
+	border: 1px solid #c3c4c7;
+	border-radius: 4px;
+}
+
+.wcs-rre-status {
+	font-size: 14px;
+	font-weight: 500;
+}
+
+.wcs-rre-status.is-default {
+	color: #2271b1;
+}
+
+.wcs-rre-status.is-custom {
+	color: #00a32a;
+}
+
+.wcs-rre-unsaved {
+	color: #d63638;
+	font-weight: normal;
+}
+
+.wcs-rre-actions {
+	display: flex;
+	gap: 10px;
+}
+
+/* Content layout */
+.wcs-rre-content {
+	display: grid;
+	grid-template-columns: 1fr 300px;
+	gap: 20px;
+}
+
+.wcs-rre-side {
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+}
+
+@media (max-width: 1024px) {
+	.wcs-rre-content {
+		grid-template-columns: 1fr;
+	}
+
+	.wcs-rre-side {
+		order: -1;
+	}
+}
+
+/* Rules list */
+.wcs-rre-rules {
+	display: flex;
+	flex-direction: column;
+	gap: 15px;
+}
+
+/* Rule card */
+.wcs-rre-rule-card {
+	background: #fff;
+	border: 1px solid #c3c4c7;
+	border-radius: 4px;
+	overflow: hidden;
+}
+
+.wcs-rre-rule-header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 12px 15px;
+	background: #f6f7f7;
+	border-bottom: 1px solid #c3c4c7;
+}
+
+.wcs-rre-rule-number {
+	font-weight: 600;
+	color: #1d2327;
+}
+
+.wcs-rre-rule-actions {
+	display: flex;
+	gap: 10px;
+}
+
+.wcs-rre-rule-actions .button-link {
+	padding: 0;
+	color: #2271b1;
+	text-decoration: none;
+}
+
+.wcs-rre-rule-actions .button-link:hover {
+	color: #135e96;
+}
+
+.wcs-rre-rule-actions .wcs-rre-delete {
+	color: #d63638;
+}
+
+.wcs-rre-rule-actions .wcs-rre-delete:hover {
+	color: #a00;
+}
+
+.wcs-rre-rule-actions .wcs-rre-move-up,
+.wcs-rre-rule-actions .wcs-rre-move-down {
+	font-size: 16px;
+	line-height: 1;
+}
+
+/* Rule body */
+.wcs-rre-rule-body {
+	padding: 15px;
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+	gap: 15px;
+}
+
+.wcs-rre-field {
+	display: flex;
+	flex-direction: column;
+	gap: 5px;
+}
+
+.wcs-rre-field label {
+	font-weight: 500;
+	font-size: 12px;
+	text-transform: uppercase;
+	color: #646970;
+}
+
+.wcs-rre-field select,
+.wcs-rre-field input {
+	width: 100%;
+}
+
+/* Interval input */
+.wcs-rre-interval-input {
+	display: flex;
+	gap: 8px;
+}
+
+.wcs-rre-interval-input input {
+	flex: 1;
+	min-width: 80px;
+}
+
+.wcs-rre-interval-input select {
+	flex: 1;
+}
+
+.wcs-rre-cumulative {
+	font-size: 12px;
+	color: #646970;
+	font-style: italic;
+}
+
+/* Add rule button */
+.wcs-rre-add-rule {
+	align-self: flex-start;
+}
+
+/* Timeline */
+.wcs-rre-timeline {
+	background: #fff;
+	border: 1px solid #c3c4c7;
+	border-radius: 4px;
+	padding: 20px;
+	height: fit-content;
+	position: sticky;
+	top: 32px;
+}
+
+.wcs-rre-timeline h3 {
+	margin: 0 0 15px 0;
+	font-size: 14px;
+	color: #1d2327;
+}
+
+.wcs-rre-timeline-empty {
+	color: #646970;
+	font-style: italic;
+	text-align: center;
+	padding: 20px;
+}
+
+.wcs-rre-timeline-list {
+	position: relative;
+}
+
+.wcs-rre-timeline-item {
+	display: flex;
+	align-items: flex-start;
+	gap: 12px;
+	padding: 10px 0;
+	position: relative;
+}
+
+.wcs-rre-timeline-item::before {
+	content: '';
+	position: absolute;
+	left: 6px;
+	top: 24px;
+	bottom: -10px;
+	width: 2px;
+	background: #c3c4c7;
+}
+
+.wcs-rre-timeline-item:last-child::before {
+	display: none;
+}
+
+.wcs-rre-timeline-marker {
+	width: 14px;
+	height: 14px;
+	border-radius: 50%;
+	background: #fff;
+	border: 2px solid #2271b1;
+	flex-shrink: 0;
+	position: relative;
+	z-index: 1;
+}
+
+.wcs-rre-timeline-start .wcs-rre-timeline-marker {
+	background: #d63638;
+	border-color: #d63638;
+}
+
+.wcs-rre-timeline-end .wcs-rre-timeline-marker {
+	background: #646970;
+	border-color: #646970;
+}
+
+.wcs-rre-timeline-time {
+	font-weight: 600;
+	color: #2271b1;
+	font-size: 12px;
+	min-width: 60px;
+}
+
+.wcs-rre-timeline-label {
+	font-size: 13px;
+	color: #1d2327;
+	line-height: 1.4;
+}
+
+.wcs-rre-timeline-start .wcs-rre-timeline-label {
+	font-weight: 600;
+	color: #d63638;
+}
+
+.wcs-rre-timeline-end .wcs-rre-timeline-label {
+	color: #646970;
+	font-size: 12px;
+}
+
+/* Email overrides */
+.wcs-rre-email-overrides {
+	border-top: 1px solid #eaecf0;
+	padding: 15px;
+	background: #f9fafb;
+}
+
+.wcs-rre-email-overrides h4 {
+	margin: 0 0 8px;
+	font-size: 13px;
+	color: #1d2327;
+}
+
+.wcs-rre-email-group {
+	background: #fff;
+	border: 1px solid #dcdcde;
+	border-radius: 4px;
+	padding: 12px;
+	margin-top: 12px;
+}
+
+.wcs-rre-email-group-header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	gap: 10px;
+	margin-bottom: 10px;
+	font-weight: 600;
+	color: #1d2327;
+}
+
+.wcs-rre-email-toggle {
+	display: flex;
+	align-items: center;
+	gap: 8px;
+	font-size: 13px;
+	margin-bottom: 10px;
+}
+
+.wcs-rre-email-fields {
+	display: grid;
+	grid-template-columns: repeat(2, minmax(0, 1fr));
+	gap: 12px;
+}
+
+.wcs-rre-email-field {
+	display: flex;
+	flex-direction: column;
+	gap: 4px;
+	min-width: 0;
+}
+
+.wcs-rre-email-field--full {
+	grid-column: 1 / -1;
+}
+
+.wcs-rre-email-field label {
+	font-weight: 500;
+	font-size: 11px;
+	text-transform: uppercase;
+	color: #646970;
+}
+
+.wcs-rre-email-field input,
+.wcs-rre-email-field textarea {
+	width: 100%;
+	box-sizing: border-box;
+}
+
+.wcs-rre-email-field textarea {
+	max-width: 100%;
+	min-width: 100%;
+	resize: vertical;
+}
+
+/* Modal */
+.wcs-rre-modal-backdrop {
+	position: fixed;
+	inset: 0;
+	background: rgba(0, 0, 0, 0.5);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	z-index: 100000;
+	padding: 20px;
+}
+
+.wcs-rre-modal {
+	background: #fff;
+	border-radius: 6px;
+	width: min(960px, 95vw);
+	max-height: 90vh;
+	display: flex;
+	flex-direction: column;
+	box-shadow: 0 12px 32px rgba(0, 0, 0, 0.2);
+}
+
+.wcs-rre-modal-header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 16px 20px;
+	border-bottom: 1px solid #eaecf0;
+}
+
+.wcs-rre-modal-header h3 {
+	margin: 0;
+	font-size: 16px;
+}
+
+.wcs-rre-modal-loading,
+.wcs-rre-modal-error {
+	padding: 20px;
+	font-size: 13px;
+	color: #646970;
+}
+
+.wcs-rre-modal-error {
+	color: #a00;
+}
+
+.wcs-rre-modal-meta {
+	padding: 12px 20px 0;
+	font-size: 13px;
+	color: #1d2327;
+	display: flex;
+	flex-direction: column;
+	gap: 6px;
+}
+
+.wcs-rre-modal-frame {
+	padding: 16px 20px 20px;
+	flex: 1;
+}
+
+.wcs-rre-modal-frame iframe {
+	border: 1px solid #c3c4c7;
+	border-radius: 4px;
+	width: 100%;
+	height: 60vh;
+	background: #fff;
+}
+
+.wcs-rre-section-nav .subsubsub {
+	margin: 0 0 10px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 782px) {
+	.wcs-rre-header {
+		flex-direction: column;
+		gap: 15px;
+		text-align: center;
+	}
+
+	.wcs-rre-rule-body {
+		grid-template-columns: 1fr;
+	}
+
+	.wcs-rre-email-fields {
+		grid-template-columns: 1fr;
+	}
+
+	.wcs-rre-timeline {
+		position: static;
+	}
+}
