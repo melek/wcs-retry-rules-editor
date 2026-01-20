@@ -1,6 +1,7 @@
 # WCS Retry Rules Editor
 
 Visual editor for WooCommerce Subscriptions failed payment retry rules.
+<img width="990" height="652" alt="image" src="https://github.com/user-attachments/assets/88510bab-0056-4e90-8de7-8b23e63fe7f4" />
 
 ## Features
 - Create, reorder, and delete retry rules.
