@@ -429,8 +429,9 @@
 	background: #fff;
 }
 
-.wcs-rre-section-nav .subsubsub {
-	margin: 0 0 10px;
+ul.subsubsub.wcs-rre-section-nav {
+	margin: 0 0 14px;
+	float: none;
 }
 
 /* Responsive adjustments */
